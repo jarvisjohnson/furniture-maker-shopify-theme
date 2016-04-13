@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.nav--left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav--right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50px;
+  background: black;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  flex-basis: 100%;
+}
+
+nav ul li {
+  padding: 10px 0 10px 0;
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li:hover {
+  background: gray;
+
+}
+
+.pageLinks {
+  margin-top: 200px;
+}
+
+.socialLinks {
+  align-self: flex-end;
+}
+
+.wrapper {
+  margin: 0 0 0 50px;
+  width: calc(100vw - 50px);
+  background: lightgray;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper__landing {
+  flex-basis: 100%;
+  height: 100vh;
+  background: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper__landing .logoWrapper {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.wrapper__landing .homeTagline {
+  align-self: flex-end;
+}
+
+.wrapper__landing .homeTagline .downArrow{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.wrapper__landing .logo {
+  height: 250px;
+  width: 250px;
+  background: gray;
+  border: 0 solid gray;
+  border-radius: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downArrow {
+  font-size: 50px;
+  color: white;
+}
+
+.wrapper__section {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+
+.wrapper__section .title {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.wrapper__section .tagline {
+  align-self: flex-start;
+}
+
+.half {
+  flex-basis: 50%;
+}
+
+.full {
+  flex-basis: 100%;
+}
+
+.furniture {
+  background: yellow;
+}
+
+.fabric {
+  background: lightgreen;
+}
+
+.custom {
+  background: lightgray;
+}
+ .cushions {
+   background: salmon;
+ }
+
+ .workshops {
+   background: lightblue;
+ }

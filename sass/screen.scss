@@ -1,0 +1,258 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/*
+1. Remove padding and margin
+2. Nav Menu
+2.1 Side bar
+3. Content wrapper
+4. Hompage Content
+*/
+
+//** 1. Remove padding and margin **
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+//** 2. Nav Menu **
+.nav-menu {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    background: #181a1a;
+
+    &--left {
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    &--right {
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+
+    &__logo {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 25px 0 0 0;
+      img {
+        height: 100px;
+        width: auto;
+      }
+    }
+
+    &__links {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 25px;
+      color: #ffffff;
+      flex-basis: 100%;
+
+      &__item {
+        padding: 10px 0 10px 0;
+        width:100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+      &__item:hover {
+       background: #363838;
+      }
+
+      &--pages {
+        margin-top: 0;
+      }
+
+      &--social {
+        align-self: flex-end;
+      }
+    }
+}
+
+//** 2.1 Sidebar **
+:hover > .sidebar {
+  display: block;
+}
+
+.sidebar {
+  display: none;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  width: 300px;
+  background: #ffffff;
+  color: #181a1a;
+  font-size: 20px;
+  font-family: sans-serif;
+
+  &__section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 25px 25px 25px;
+    font-size: 16px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    p {
+      margin: 0 0 25px 0;
+      font-size: 14px;
+    }
+
+    &__list-item {
+      padding-left: 5px;
+      font-size: 14px;
+      line-height: 23px;
+    }
+
+    &__list-item:before {
+      content: "-";
+      margin-right: 5px;
+    }
+  }
+
+  &__section--title {
+    // height: 100px;
+    background: #ebebeb;
+    color: black;
+    font-size: 32px;
+    line-height: 64px;
+    padding: 6px 25px 6px 25px;
+  }
+}
+
+//** 3. Content Wrapper **
+.wrapper {
+  margin: 0 0 0 49px;
+  width: calc(100vw - 49px);
+  background: lightgray;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+//** 4. Homepage Content **
+.landing {
+  flex-basis: 100%;
+  height: 100vh;
+  background: url(../images/landing.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
+  &__logo-wrapper {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+
+    .home-logo {
+      height: 250px;
+      width: 250px;
+      background: rgba(0,0,0,0.85);
+      // opacity: 0.85;
+      border: 0 solid gray;
+      border-radius: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width:200px;
+        height:auto;
+      }
+    }
+  }
+
+  &__tagline {
+    align-self: flex-end;
+
+    .down-arrow {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      font-size: 50px;
+      color: white;
+    }
+  }
+}
+
+
+.home-section {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 50px;
+
+  &__title {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 32px;
+  }
+
+  &__tagline {
+    align-self: flex-start;
+  }
+
+  &--half {
+    flex-basis: 50%;
+  }
+
+  &--full {
+    flex-basis: 100%;
+  }
+
+  &--furniture {
+    background: url(../images/furniture.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  &--fabric {
+    background: url(../images/fabric.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  &--custom {
+    background: url(../images/custom.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  &--cushions {
+    background: url(../images/cushions.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  &--workshops {
+    background: url(../images/workshops.png) no-repeat center center;
+    background-size: cover;
+  }
+}
