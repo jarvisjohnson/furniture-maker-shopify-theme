@@ -17,8 +17,13 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+//** Helper Classes
+.flex{
+  display: flex;
+}
 
 //** 2. Nav Menu **
 .nav-menu {
@@ -200,7 +205,6 @@
   }
 }
 
-
 .home-section {
   height: 50vh;
   display: flex;
@@ -208,7 +212,6 @@
   justify-content:center;
   align-items: center;
   color: #ffffff;
-  box-sizing: border-box;
   padding: 50px;
 
   &__title {
@@ -254,5 +257,83 @@
   &--workshops {
     background: url(../images/workshops.png) no-repeat center center;
     background-size: cover;
+  }
+}
+
+.page-section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 35px 70px;
+  height: 100vh;
+  background: seagreen;
+
+  &--category {
+    flex-basis: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  &--left {
+    flex: 0 1 50%;
+  }
+
+  &--twothirds {
+    flex: 0 1 calc(100% * 710 / 1240);
+  }
+
+  &--right {
+    flex: 1 0;
+  }
+
+  &--nopad {
+    padding: 0;
+  }
+  &__title {
+
+    &--category {
+      flex: 0 0 10%;
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      padding: 20px 0;
+    }
+  }
+  &__select {
+
+    }
+  &__products {
+    flex: 1 0 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: white;
+    margin-bottom: 30px;
+  }
+
+  &__image{
+    background: gray;
+  }
+}
+
+.card {
+    flex: 0 0 280px;
+    background: antiquewhite;
+    flex-wrap: wrap;
+  &__image
+  {
+    width: 100%;
+    height: 280px;
+  }
+  &__footer
+  {
+    text-align: left;
+    flex-wrap: wrap;
+  }
+  &--category
+  {
+    margin-bottom: 30px;
+  }
+  &--empty
+  {
+    background: white;
   }
 }
